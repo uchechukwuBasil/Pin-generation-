@@ -1,0 +1,41 @@
+
+#include <iostream>
+#include <cstdlib>
+#include <string.h>
+using namespace std;
+
+
+int main() {
+    char user[5];
+    int result;
+    int x;
+    cout << "Do you want a pin : ";
+    cin >> user;
+    int l = strlen(user);
+    for(int i=0; i<l;i++)
+    {
+        user[i] = tolower(user[i]);
+        
+    }
+    result = strcmp(user, "yes");
+    if ( result == 0) {
+    
+      cout << user;
+      
+      cout << "\nYour new Pin will be sent to your email on file"<< endl;
+        srand(time(0));
+        x = rand()%1900;
+        printf("The number is %04d \n", x);
+        x = 1000+(rand()%9000);
+        printf("The altnumber is %d \n", x);
+    }
+    else {
+         
+         cout << user << endl;
+        
+        printf("Your account is secured: \n");
+        
+        
+    }
+    return 0;
+}
